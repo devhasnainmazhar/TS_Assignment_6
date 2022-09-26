@@ -388,7 +388,6 @@
 // }
 
 //     console.log(`GCD or HCF of ${a} and ${b} = ${gcd(a , b)}`);
-      
 
 
 // Question # 25
@@ -458,19 +457,17 @@
 // Question # 30
 // Write a ts program to check whether a number is Armstrong number or not.
 
-// let x: number = Number(prompt("Enter a number"));
-// const power = (x, y) => {
+// var x: number = Number(prompt("Enter a number"));
+// power = (x, y) => {
 //         if( y == 0)
 //             return 1;
 //         if (y % 2 == 0)
-//             return power(x, Math.floor(y / 2)) *
-//                    power(x, Math.floor(y / 2));
-                      
-//         return x * power(x, Math.floor(y / 2)) *
-//                    power(x, Math.floor(y / 2));
+//             return  power(x, Math.floor(y / 2)) *
+//                     power(x, Math.floor(y / 2));
+//         return x *  power(x, Math.floor(y / 2)) *
+//                     power(x, Math.floor(y / 2));
 //     }
-   
-//     function order(x)
+//   const order = (x) =>
 //     {
 //         let n = 0;
 //         while (x != 0)
@@ -480,29 +477,221 @@
 //         }
 //         return n;
 //     }
- 
+
 //     const isArmstrong = (x) => {
-           
-        // Calling order function
-        // let n = order(x);
-        // let temp = x, sum = 0;
-        // while (temp != 0)
-        // {
-        //     let r = temp % 10;
-        //     sum = sum + power(r, n);
-        //     temp = Math.floor(temp / 10);
-        // }
+
+
+//         let n = order(x);
+//         let temp = x, sum = 0;
+//         while (temp != 0)
+//         {
+//             let r = temp % 10;
+//             sum = sum + power(r, n);
+//             temp = Math.floor(temp / 10);
+//         }
+//         return (sum == x);
+//     }
+     
+//     if(isArmstrong(x))
+//     {
+//         console.log(`${x} is an Armstron number`);
+//     }
+//     else{
+//         console.log(`${x} is not Armstron number`);
+//     }
+
+
+    // Question # 30
+    // Write a program to print all Armstrong numbers between 1 to n.
+
+
+    // let x: number = Number(prompt("Enter a number"));
+    // const power = (x, y) => {
+    //     if( y == 0)
+    //         return 1;
+    //     if (y % 2 == 0)
+    //         return power(x, Math.floor(y / 2)) *
+    //                power(x, Math.floor(y / 2));
+                      
+    //     return x * power(x, Math.floor(y / 2)) *
+    //                power(x, Math.floor(y / 2));
+    // }
    
-        // If satisfies Armstrong condition
+    // const  order = (x) =>
+    // {
+    //     let n = 0;
+    //     while (x != 0)
+    //     {
+    //         n++;
+    //         x = Math.floor(x/10);
+    //     }
+    //     return n;
+    // }
+ 
+    // const isArmstrong = (x) => {
+           
+    //     // Calling order function
+    //     let n = order(x);
+    //     let temp = x, sum = 0;
+    //     while (temp != 0)
+    //     {
+    //         let r = temp % 10;
+    //         sum = sum + power(r, n);
+    //         temp = Math.floor(temp / 10);
+    //     }
+   
+    //     // If satisfies Armstrong condition
     //     return (sum == x);
     // }
      
     // if(isArmstrong(x))
     // {
-    //     console.log(`${x} is an Armstron number`);
+        // for(let i=1; i<=x; i++){
+        //     if(isArmstrong(i)){
+        //         console.log(`${i} is an Armstron number`);
+        //     }
+        // }
+    //     
     // }
     // else{
     //     console.log(`${x} is not Armstron number`);
     // }
 
+    // Question # 32
+    // Write a ts program to check whether a number is Perfect number or not.
 
+
+    // let n: number = Number(prompt("Enter a number"));
+    // function isPerfect(n)
+    // {
+    //     // To store sum of divisors
+    //     let sum = 1;
+    //     for (let i=2; i*i<=n; i++)
+    //     {
+    //         if (n%i==0)
+    //         {
+    //             if(i*i!=n)
+    //                 sum = sum + i + n/i;
+    //             else
+    //                 sum=sum+i;
+    //         }
+    //     }
+    //     if (sum == n && n != 1)
+    //     return true;
+    // return false;
+    // }
+
+    // if (isPerfect(n)){
+    //     console.log(`${n} is a perfect number`);
+    // }else{
+    //     console.log(`${n} is not perfect number`);
+    // }
+
+
+        // Question # 33
+    // Write a ts program to print all Perfect numbers between 1 to n.
+
+
+    // let n: number = Number(prompt("Enter a number"));
+    // function isPerfect(n)
+    // {
+    //     let sum = 1;
+    //     for (let i=2; i*i<=n; i++)
+    //     {
+    //         if (n%i==0)
+    //         {
+    //             if(i*i!=n)
+    //                 sum = sum + i + n/i;
+    //             else
+    //                 sum=sum+i;
+    //         }
+    //     }
+    //     if (sum == n && n != 1)
+    //     return true;
+    // return false;
+    // }
+
+    // if (isPerfect(n)){
+    //     for(let i=2; i<n; i++){
+    //     console.log(`${i} is a perfect number`);
+    //     }
+    // }
+
+
+// Question # 34
+// Write a ts program to check whether a number is Strong number or not.
+
+// let x: number = Number(prompt("Enter a number"));
+// let f = new Array(10);
+
+
+//     function preCompute()
+// {
+//     f[0] = f[1] = 1;
+//     for (let i = 2; i<10; ++i)
+//         f[i] = f[i-1] * i;
+// }
+
+//         function isStrong(x)
+// {
+//     let factSum = 0;
+
+//     // Traverse through all digits of x.
+//     let temp = x;
+//     while (temp)
+//     {
+//         factSum += f[temp%10];
+//         temp = Math.floor(temp/10);
+//     }
+
+//     return (factSum == x);
+// }
+
+// preCompute();
+ 
+// if (isStrong(x)){
+//     console.log(`${x} is a Strong number`)
+// }else{
+//     console.log(`${x} is not Strong number`)
+// }
+
+
+// Question # 35
+
+
+// let x: number = Number(prompt("Enter a number"));
+// let f = new Array(10);
+
+
+//     function preCompute()
+// {
+//     f[0] = f[1] = 1;
+//     for (let i = 2; i<10; ++i)
+//         f[i] = f[i-1] * i;
+// }
+
+//         function isStrong(x)
+// {
+//     let factSum = 0;
+
+//     // Traverse through all digits of x.
+//     let temp = x;
+//     while (temp)
+//     {
+//         factSum += f[temp%10];
+//         temp = Math.floor(temp/10);
+//     }
+
+//     return (factSum == x);
+// }
+
+// preCompute();
+ 
+// if (isStrong(x)){
+//     for(let i=2; i<x; i++){
+//         console.log(`${i} is a Strong number`)
+//     }
+    
+// }else{
+//     console.log(`${x} is not Strong number`)
+// }
